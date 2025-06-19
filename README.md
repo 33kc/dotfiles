@@ -27,3 +27,7 @@ xfce is my DE, the folder contains all the important configs/ricing
 # neofetch
 
 ![neofetch](neofetch.png)
+
+# rough screenshot of my rice
+
+![my rice][mainRice.png]

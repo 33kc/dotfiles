@@ -30,4 +30,4 @@ xfce is my DE, the folder contains all the important configs/ricing
 
 # rough screenshot of my rice
 
-![my rice][mainRice.png]
+[rice][mainRice.png]

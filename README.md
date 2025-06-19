@@ -23,3 +23,7 @@ neovim configurations (init.lua)
 
 # xfce
 xfce is my DE, the folder contains all the important configs/ricing
+
+# neofetch
+
+![neofetch](neofetch.png)

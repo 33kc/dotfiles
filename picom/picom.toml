@@ -1,0 +1,11 @@
+backend = "xrender"
+vsync = false
+shadow = false
+fading = false
+blur = { method = "none" }
+
+opacity = { inactive = 1.0, active = 1.0, frame = 1.0 }
+
+opacity_rules = [
+    "50:class_g = 'Alacritty'"
+]

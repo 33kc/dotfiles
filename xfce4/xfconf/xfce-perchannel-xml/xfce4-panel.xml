@@ -39,11 +39,11 @@
       <property name="favorites" type="array">
         <value type="string" value="firefox_firefox.desktop"/>
         <value type="string" value="com.spotify.Client.desktop"/>
-        <value type="string" value="com.valvesoftware.Steam.desktop"/>
         <value type="string" value="org.vinegarhq.Sober.desktop"/>
         <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="org.freedesktop.Piper.desktop"/>
         <value type="string" value="xfce4-file-manager.desktop"/>
+        <value type="string" value="Alacritty.desktop"/>
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
         <value type="string" value="xfce4-taskmanager.desktop"/>
       </property>
@@ -54,7 +54,6 @@
         <value type="string" value="xfce4-file-manager.desktop"/>
         <value type="string" value="firefox_firefox.desktop"/>
         <value type="string" value="com.spotify.Client.desktop"/>
-        <value type="string" value="com.valvesoftware.Steam.desktop"/>
         <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="xfce4-web-browser.desktop"/>
         <value type="string" value="xfce4-terminal-emulator.desktop"/>

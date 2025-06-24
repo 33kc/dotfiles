@@ -1,5 +1,6 @@
 [window]
 decorations = "full"
+opacity = 1.0
 title = "Alacritty"
 dynamic_title = true
 startup_mode = "Windowed" 

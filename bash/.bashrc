@@ -119,3 +119,4 @@ fi
 # Created by `pipx` on 2025-06-12 11:34:07
 export PATH="$PATH:/home/kc/.local/bin"
 neofetch
+~/Scripts/mouseaccel.sh

@@ -11,6 +11,7 @@
       <value type="string" value="blueman"/>
       <value type="string" value="com.spotify.Client"/>
       <value type="string" value="discord"/>
+      <value type="string" value="Firefox"/>
       <value type="string" value="firefox_Firefox"/>
       <value type="string" value="org.freedesktop.network-manager-applet"/>
       <value type="string" value="spotify_spotify-1ca3cdee-967e-4044-a20f-95aabac096f7"/>
@@ -22,4 +23,5 @@
       <value type="string" value="xfce4-settings-helper"/>
     </property>
   </property>
+  <property name="date-time-custom-format" type="string" value="%a %H:%M:%S"/>
 </channel>

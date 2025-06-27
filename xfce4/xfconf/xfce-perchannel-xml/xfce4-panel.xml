@@ -37,7 +37,8 @@
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="whiskermenu">
       <property name="favorites" type="array">
-        <value type="string" value="firefox_firefox.desktop"/>
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="webcord.desktop"/>
         <value type="string" value="com.spotify.Client.desktop"/>
         <value type="string" value="org.vinegarhq.Sober.desktop"/>
         <value type="string" value="xfce-settings-manager.desktop"/>
@@ -48,11 +49,12 @@
         <value type="string" value="xfce4-taskmanager.desktop"/>
       </property>
       <property name="recent" type="array">
+        <value type="string" value="webcord.desktop"/>
+        <value type="string" value="org.gnome.Mines.desktop"/>
         <value type="string" value="panel-preferences.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce4-appfinder.desktop"/>
         <value type="string" value="xfce4-file-manager.desktop"/>
-        <value type="string" value="firefox_firefox.desktop"/>
         <value type="string" value="com.spotify.Client.desktop"/>
         <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="xfce4-web-browser.desktop"/>

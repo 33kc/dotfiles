@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Rofi
+Comment=
+Exec=/home/kc/Scripts/launchRofi.sh
+Icon=xfce-display-profile
+Path=
+Terminal=false
+StartupNotify=false

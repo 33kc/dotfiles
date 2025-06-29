@@ -76,10 +76,10 @@
       <property name="&lt;Super&gt;e" type="string" value="exo-open --launch FileManager"/>
       <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
       <property name="override" type="bool" value="true"/>
-      <property name="Super_L" type="string" value="xfce4-popup-whiskermenu"/>
       <property name="F3" type="string" value="xfce4-popup-applicationsmenu"/>
       <property name="F4" type="string" value="xfce4-appfinder"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="alacritty"/>
+      <property name="Super_L" type="string" value="/home/kc/Scripts/launchRofi.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

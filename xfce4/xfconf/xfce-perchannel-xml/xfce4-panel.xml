@@ -8,7 +8,6 @@
       <property name="length" type="double" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="1"/>
         <value type="int" value="2"/>
         <value type="int" value="3"/>
         <value type="int" value="4"/>
@@ -17,6 +16,7 @@
         <value type="int" value="8"/>
         <value type="int" value="9"/>
         <value type="int" value="10"/>
+        <value type="int" value="13"/>
       </property>
       <property name="background-style" type="uint" value="2"/>
       <property name="size" type="uint" value="24"/>
@@ -35,38 +35,6 @@
     <property name="dark-mode" type="bool" value="false"/>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-1" type="string" value="whiskermenu">
-      <property name="favorites" type="array">
-        <value type="string" value="firefox.desktop"/>
-        <value type="string" value="webcord.desktop"/>
-        <value type="string" value="com.spotify.Client.desktop"/>
-        <value type="string" value="org.vinegarhq.Sober.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="org.freedesktop.Piper.desktop"/>
-        <value type="string" value="xfce4-file-manager.desktop"/>
-        <value type="string" value="Alacritty.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="xfce4-taskmanager.desktop"/>
-      </property>
-      <property name="recent" type="array">
-        <value type="string" value="webcord.desktop"/>
-        <value type="string" value="org.gnome.Mines.desktop"/>
-        <value type="string" value="panel-preferences.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce4-appfinder.desktop"/>
-        <value type="string" value="xfce4-file-manager.desktop"/>
-        <value type="string" value="com.spotify.Client.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="xfce4-web-browser.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-      </property>
-      <property name="launcher-show-tooltip" type="bool" value="false"/>
-      <property name="category-icon-size" type="int" value="2"/>
-      <property name="launcher-show-name" type="bool" value="true"/>
-      <property name="view-mode" type="int" value="1"/>
-      <property name="launcher-show-description" type="bool" value="false"/>
-      <property name="menu-width" type="int" value="450"/>
-    </property>
     <property name="plugin-2" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="false"/>
@@ -109,6 +77,11 @@
       <property name="digital-time-format" type="string" value=" %d %b, %H:%M "/>
       <property name="digital-layout" type="uint" value="3"/>
       <property name="mode" type="uint" value="2"/>
+    </property>
+    <property name="plugin-13" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="17512018642.desktop"/>
+      </property>
     </property>
   </property>
   <property name="configver" type="int" value="2"/>

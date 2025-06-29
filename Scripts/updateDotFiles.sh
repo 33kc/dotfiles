@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 DOTFILES_DIR=~/dotfiles
 echo "updating/copying dotfiles."
@@ -10,10 +9,10 @@ mkdir -p $DOTFILES_DIR/xfce4
 mkdir -p $DOTFILES_DIR/alacritty
 mkdir -p $DOTFILES_DIR/picom
 mkdir -p $DOTFILES_DIR/Scripts
+mkdir -p $DOTFILES_DIR/rofi  # NEW
 
 echo "copying scripts"
 rsync -a --exclude "dscCode.sh" ~/Scripts/ "$DOTFILES_DIR/Scripts/"
- 
 
 echo "copying .bashrc"
 cp ~/.bashrc $DOTFILES_DIR/bash/
@@ -25,8 +24,6 @@ echo "copying xfce4 config."
 cp -r ~/.config/xfce4/* $DOTFILES_DIR/xfce4/
 
 echo "copying alacritty config."
-
-# incase i switch formats in the future
 if [ -f ~/.config/alacritty/alacritty.toml ]; then
     cp ~/.config/alacritty/alacritty.toml $DOTFILES_DIR/alacritty/
 else
@@ -42,5 +39,11 @@ else
     echo "no picom config found"
 fi
 
-echo "dotfiles updated"
+echo "copying rofi config and themes."
+if [ -d ~/.config/rofi ]; then
+    rsync -a --exclude="rofi-*" ~/.config/rofi/ "$DOTFILES_DIR/rofi/"
+else
+    echo "rofi config directory not found"
+fi
 
+echo "dotfiles updated"

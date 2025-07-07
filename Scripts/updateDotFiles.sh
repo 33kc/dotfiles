@@ -11,6 +11,7 @@ mkdir -p $DOTFILES_DIR/picom
 mkdir -p $DOTFILES_DIR/Scripts
 mkdir -p $DOTFILES_DIR/rofi
 mkdir -p $DOTFILES_DIR/polybar
+mkdir -p $DOTFILES_DIR/st
 
 echo "copying scripts"
 rsync -a --exclude "dscCode.sh" ~/Scripts/ "$DOTFILES_DIR/Scripts/"
@@ -49,6 +50,19 @@ if [ -d ~/.config/polybar ]; then
     rsync -a ~/.config/polybar/ "$DOTFILES_DIR/polybar/"
 else
     echo "polybar config directory not found"
+fi
+
+echo "copying st configs."
+if [ -d ~/st ]; then
+    rsync -a \
+        --exclude=".git" \
+        --exclude="*.o" \
+        --exclude="*.out" \
+        --exclude="*.swp" \
+        --exclude="config.h" \
+        ~/st/ "$DOTFILES_DIR/st/"
+else
+    echo "~/st directory not found"
 fi
 
 

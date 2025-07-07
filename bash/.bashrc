@@ -120,3 +120,4 @@ fi
 export PATH="$PATH:/home/kc/.local/bin"
 neofetch
 ~/Scripts/mouseaccel.sh
+export COLORTERM=truecolor

@@ -12,6 +12,7 @@ mkdir -p $DOTFILES_DIR/Scripts
 mkdir -p $DOTFILES_DIR/rofi
 mkdir -p $DOTFILES_DIR/polybar
 mkdir -p $DOTFILES_DIR/st
+mkdir -p $DOTFILES_DIR/Wallpapers
 
 echo "copying scripts"
 rsync -a --exclude "dscCode.sh" ~/Scripts/ "$DOTFILES_DIR/Scripts/"
@@ -65,5 +66,7 @@ else
     echo "~/st directory not found"
 fi
 
+echo "copying wallpapers"
+cp -r ~/Pictures/Wallpaper/* $DOTFILES_DIR/Wallpapers
 
 echo "dotfiles updated"

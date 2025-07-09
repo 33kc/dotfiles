@@ -9,6 +9,7 @@
 - **Powermenu**: Rofi
 - **Panel**: Polybar
 - **DE/WM**: Xfce 4.18 + Xfwm4
+- **Compositor**: Picom
 
 # neofetch
 

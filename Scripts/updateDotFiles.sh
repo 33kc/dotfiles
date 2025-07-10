@@ -13,6 +13,7 @@ mkdir -p $DOTFILES_DIR/rofi
 mkdir -p $DOTFILES_DIR/polybar
 mkdir -p $DOTFILES_DIR/st
 mkdir -p $DOTFILES_DIR/Wallpapers
+mkdir -p $DOTFILES_DIR/dwm
 
 echo "copying scripts"
 rsync -a --exclude "dscCode.sh" ~/Scripts/ "$DOTFILES_DIR/Scripts/"
@@ -25,6 +26,20 @@ cp ~/.config/nvim/init.lua $DOTFILES_DIR/nvim/
 
 echo "copying xfce4 config."
 cp -r ~/.config/xfce4/* $DOTFILES_DIR/xfce4/
+
+echo "copying dwm configs"
+if [ -d ~/.config/dwm ]; then
+    rsync -a \
+        --exclude=".git" \
+        --exclude="*.o" \
+        --exclude="*.out" \
+        --exclude="*.swp" \
+        --exclude="config.h" \
+        --exclude="patches.h" \
+        ~/.config/dwm/ "$DOTFILES_DIR/dwm/"
+else
+    echo "dwm config directory not found"
+fi
 
 echo "copying alacritty config."
 if [ -f ~/.config/alacritty/alacritty.toml ]; then

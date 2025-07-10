@@ -8,7 +8,7 @@
 - **Launcher**: Rofi (Adi1090x theme)
 - **Powermenu**: Rofi
 - **Panel**: Polybar
-- **DE/WM**: Xfce 4.18 + Xfwm4
+- **DE/WM**: XFCE + dwm
 - **Compositor**: Picom
 
 # neofetch
@@ -21,3 +21,6 @@
 ![rice2](images/rice2.png)
 ![terminalRice](images/terminalRice1.png)
 
+# small note
+
+you might be wondering why i have dwm AND xfwm, well it's temporary, right now my main wm is XFWM, i'm slowly migrating to dwm so that's that

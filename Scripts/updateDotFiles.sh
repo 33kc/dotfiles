@@ -54,14 +54,14 @@ else
 fi
 
 echo "copying st configs."
-if [ -d ~/st ]; then
+if [ -d ~/.config/st ]; then
     rsync -a \
         --exclude=".git" \
         --exclude="*.o" \
         --exclude="*.out" \
         --exclude="*.swp" \
         --exclude="config.h" \
-        ~/st/ "$DOTFILES_DIR/st/"
+        ~/.config/st/ "$DOTFILES_DIR/st/"
 else
     echo "~/st directory not found"
 fi

@@ -1364,7 +1364,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                                  8)
 { ControlMask|Mod1Mask, XK_t, spawn, SHCMD("st") },
 { MODKEY,                       XK_z,      spawn,          SHCMD("/home/kc/.config/rofi/launchers/type-1/launcher.sh") }
-
+{ ShiftMask,                    XK_Print,  spawn,          SHCMD("scrot -s - | xclip -selection clipboard -target image/png -i") },
 };
 
 #if KEYMODES_PATCH

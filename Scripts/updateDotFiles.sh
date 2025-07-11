@@ -84,4 +84,7 @@ fi
 echo "copying wallpapers"
 cp -r ~/Pictures/Wallpaper/* $DOTFILES_DIR/Wallpapers
 
+echo "copying .xinitrc"
+cp ~/.xinitrc $DOTFILES_DIR
+
 echo "dotfiles updated"

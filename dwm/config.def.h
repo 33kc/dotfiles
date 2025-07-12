@@ -1363,9 +1363,14 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                                  7)
 	TAGKEYS(                        XK_9,                                  8)
 { ControlMask|Mod1Mask, XK_t, spawn, SHCMD("st") },
-{ MODKEY,                       XK_z,      spawn,          SHCMD("/home/kc/.config/rofi/launchers/type-1/launcher.sh") }
+{ MODKEY,                       XK_z,      spawn,          SHCMD("/home/kc/.config/rofi/launchers/type-1/launcher.sh") }, 
 { ShiftMask,                    XK_Print,  spawn,          SHCMD("scrot -s - | xclip -selection clipboard -target image/png -i") },
-};
+{ 0,                            XF86XK_MonBrightnessUp,        spawn,          SHCMD("brightnessctl set +5%") },
+{ 0,                            XF86XK_MonBrightnessDown,      spawn,          SHCMD("brightnessctl set 5%-") },
+{ 0,                            XF86XK_AudioRaiseVolume, spawn,          SHCMD("amixer -q sset Master 5%+") },
+{ 0,                            XF86XK_AudioLowerVolume, spawn,          SHCMD("amixer -q sset Master 5%-") },
+{ 0,                            XF86XK_AudioMute,        spawn,          SHCMD("amixer -q sset Master toggle") }
+}; 
 
 #if KEYMODES_PATCH
 static const Key cmdkeys[] = {

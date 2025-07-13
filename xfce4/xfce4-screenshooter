@@ -1,0 +1,9 @@
+app=/usr/bin/display-im6.q16
+custom_action_command=/usr/libexec/xfce4/screenshooter/scripts/imgur-upload.sh %f %imgur_client_id
+last_user=
+last_extension=png
+enable_imgur_upload=true
+show_in_folder=false
+screenshot_dir=file:/home/kc/Pictures/Screenshots
+action=2
+

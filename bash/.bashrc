@@ -121,3 +121,7 @@ export PATH="$PATH:/home/kc/.local/bin"
 neofetch
 ~/Scripts/mouseaccel.sh
 export COLORTERM=truecolor
+
+export PATH=$PATH:/home/kc/.spicetify
+. "$HOME/.cargo/env"
+export PATH="$HOME/.cargo/bin:$PATH"

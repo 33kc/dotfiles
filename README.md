@@ -1,11 +1,11 @@
 # what's in this repo? <Br> <br>
 
-- **Theme**: TokyoNight (Dark)
-- **Icons**: ePapirus Dark
+- **Theme**: Catppuccin Mocha Lavender (Dark)
+- **Icons**: Catppuccin Mocha Lavender
 - **Font**: JetBrainsMono Nerd Font
 - **Terminal**: Alacritty/ST (i use alacritty when i need gpu rendering related work, st for basic use)
 - **Shell**: Bash 5.2.21
-- **Launcher**: Rofi (Adi1090x theme)
+- **Launcher**: Rofi 
 - **Powermenu**: Rofi
 - **Panel**: Polybar
 - **DE/WM**: XFCE + dwm
@@ -19,7 +19,6 @@
 
 ![rice](images/rice1.png)
 ![rice2](images/rice2.png)
-![terminalRice](images/terminalRice1.png)
 
 # small note
 

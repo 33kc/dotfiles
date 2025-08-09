@@ -184,32 +184,34 @@ char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
 #endif // DRAG_AND_DROP_PATCH
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-    /* 0: black background */
-    "#1a1b26", // background
-    "#f7768e", // red
-    "#9ece6a", // green
-    "#e0af68", // yellow
-    "#7aa2f7", // blue
-    "#bb9af7", // magenta
-    "#7dcfff", // cyan
-    "#c0caf5", // white
+static char *colorname[] = {
+	/* 8 normal colors */
+	"#1e1e2e", /* black   */
+	"#f38ba8", /* red     */
+	"#a6e3a1", /* green   */
+	"#f9e2af", /* yellow  */
+	"#89b4fa", /* blue    */
+	"#f5c2e7", /* magenta */
+	"#94e2d5", /* cyan    */
+	"#bac2de", /* white   */
 
-    "#414868", // bright black
-    "#f7768e", // bright red
-    "#9ece6a", // bright green
-    "#e0af68", // bright yellow
-    "#7aa2f7", // bright blue
-    "#bb9af7", // bright magenta
-    "#7dcfff", // bright cyan
-    "#a9b1d6", // bright white
+	/* 8 bright colors */
+	"#6c7086", /* black   */
+	"#f38ba8", /* red     */
+	"#a6e3a1", /* green   */
+	"#f9e2af", /* yellow  */
+	"#89b4fa", /* blue    */
+	"#f5c2e7", /* magenta */
+	"#94e2d5", /* cyan    */
+	"#a6adc8", /* white   */
 
-    [256] = "#1a1b26", // background
-    [257] = "#c0caf5", // foreground
-    [258] = "#33467C", // selection background
-    [259] = "#1a1b26", // selection foreground
+	[255] = 0,
+
+	/* more colors can be added here */
+	[256] = "#1e1e2e", /* default background */
+	[257] = "#cdd6f4", /* default foreground */
+	[258] = "#585b70", /* cursor */
 };
-
 /* Default colors (colorname index) */
 
 /*

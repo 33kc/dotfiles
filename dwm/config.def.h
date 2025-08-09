@@ -573,7 +573,7 @@ static const Inset default_inset = {
  */
 static const BarRule barrules[] = {
     /* monitor_id,   bar position,     vertical padding, horizontal padding, bar height,   scheme */
-    { -2,            -1,               -1,               -1,                 -1,           -1 }, // <--- This line tells DWM to draw NO internal bars
+{ -2,           0,                 0,                 0,                 0,             0 },
 };
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */

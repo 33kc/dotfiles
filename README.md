@@ -4,10 +4,10 @@
 - **Icons**: Catppuccin Mocha Lavender
 - **Font**: JetBrainsMono Nerd Font
 - **Terminal**: Alacritty/ST (i use alacritty when i need gpu rendering related work, st for basic use)
-- **Shell**: Bash 5.2.21
+- **Shell**: Dash for daily drive, Bash for whenever i feel like it
 - **Launcher**: Rofi 
 - **Powermenu**: Rofi
-- **Panel**: Polybar
+- **Panel**: Polybar / dwmblocks
 - **DE/WM**: XFCE + dwm
 - **Compositor**: Picom
 
@@ -20,6 +20,9 @@
 ![rice](images/rice1.png)
 ![rice2](images/rice2.png)
 
-# small note
 
-you might be wondering why i have dwm AND xfwm, well it's temporary, right now my main wm is XFWM, i'm slowly migrating to dwm so that's that
+# configs to ignore
+i was trying to get dwmblocks to render some colors with shell scripts but i've failed terribly  <Br>
+then naturally, i decided the logical next step to waste time was to re-structure my entire dotfiles directory and make it more "organized" so my heart feels content <Br>
+i really need better hobbies bro smh <Br>
+but yeah my dwmblocks configs are broken so i'd suggest not to play with them

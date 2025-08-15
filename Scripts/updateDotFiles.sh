@@ -1,94 +1,65 @@
-#!/bin/bash
+#!/bin/dash
 
-DOTFILES_DIR=~/dotfiles
-echo "updating/copying dotfiles."
+DOTFILES_DIR="$HOME/dotfiles"
+CONFIG_DIR="$DOTFILES_DIR/config"
+echo "Updating/copying dotfiles..."
 
-mkdir -p $DOTFILES_DIR/bash
-mkdir -p $DOTFILES_DIR/nvim
-mkdir -p $DOTFILES_DIR/xfce4
-mkdir -p $DOTFILES_DIR/alacritty
-mkdir -p $DOTFILES_DIR/picom
-mkdir -p $DOTFILES_DIR/Scripts
-mkdir -p $DOTFILES_DIR/rofi
-mkdir -p $DOTFILES_DIR/polybar
-mkdir -p $DOTFILES_DIR/st
-mkdir -p $DOTFILES_DIR/Wallpapers
-mkdir -p $DOTFILES_DIR/dwm
-mkdir -p $DOTFILES_DIR/images
+mkdir -p "$CONFIG_DIR/Shells/bash"
+mkdir -p "$CONFIG_DIR/Shells/dash"
 
-echo "copying scripts"
-rsync -a --exclude "dscCode.sh" ~/Scripts/ "$DOTFILES_DIR/Scripts/"
+mkdir -p "$CONFIG_DIR/Terminals/alacritty"
+mkdir -p "$CONFIG_DIR/Terminals/st"
 
-echo "copying .bashrc"
-cp ~/.bashrc $DOTFILES_DIR/bash/
+mkdir -p "$CONFIG_DIR/Compositor/picom"
 
-echo "copying nvim config."
-cp ~/.config/nvim/init.lua $DOTFILES_DIR/nvim/
+mkdir -p "$CONFIG_DIR/Panels/polybar"
+mkdir -p "$CONFIG_DIR/Panels/dwmblocks"
 
-echo "copying xfce4 config."
-cp -r ~/.config/xfce4/* $DOTFILES_DIR/xfce4/
+mkdir -p "$CONFIG_DIR/WM/dwm"
+mkdir -p "$CONFIG_DIR/DE/xfce4"
 
-echo "copying dwm configs"
-if [ -d ~/.config/dwm ]; then
-    rsync -a \
-        --exclude=".git" \
-        --exclude="*.o" \
-        --exclude="*.out" \
-        --exclude="*.swp" \
-        --exclude="config.h" \
-        --exclude="patches.h" \
-        ~/.config/dwm/ "$DOTFILES_DIR/dwm/"
-else
-    echo "dwm config directory not found"
-fi
+mkdir -p "$CONFIG_DIR/ExtraConfigs/nvim"
+mkdir -p "$CONFIG_DIR/ExtraConfigs/neofetch"
+mkdir -p "$CONFIG_DIR/ExtraConfigs/rofi"
 
-echo "copying alacritty config."
-if [ -f ~/.config/alacritty/alacritty.toml ]; then
-    cp ~/.config/alacritty/alacritty.toml $DOTFILES_DIR/alacritty/
-else
-    echo "alacritty.toml not found"
-fi
+mkdir -p "$DOTFILES_DIR/Scripts"
+mkdir -p "$DOTFILES_DIR/Wallpapers"
+mkdir -p "$DOTFILES_DIR/Images"
 
-echo "copying picom config."
-if [ -f ~/.config/picom/picom.conf ]; then
-    cp ~/.config/picom/picom.conf $DOTFILES_DIR/picom/
-else
-    echo "picom.conf not found"
-fi
+# --- Shell configs ---
+cp "$HOME/.bashrc" "$CONFIG_DIR/Shells/bash/.bashrc" 2>/dev/null || echo ".bashrc not found"
+cp "$HOME/.dashrc" "$CONFIG_DIR/Shells/dash/.dashrc" 2>/dev/null || echo ".dashrc not found"
 
-echo "copying rofi config and themes."
-if [ -d ~/.config/rofi ]; then
-    rsync -a --exclude=".git" --exclude="*.swp" ~/.config/rofi/ "$DOTFILES_DIR/rofi/"
-else
-    echo "rofi config directory not found"
-fi
-echo "copying polybar config and scripts."
-if [ -d ~/.config/polybar ]; then
-    rsync -a ~/.config/polybar/ "$DOTFILES_DIR/polybar/"
-else
-    echo "polybar config directory not found"
-fi
+# --- Terminal configs ---
+cp "$HOME/.config/alacritty/alacritty.toml" "$CONFIG_DIR/Terminals/alacritty/alacritty.toml" 2>/dev/null || echo "alacritty.toml not found"
+rsync -a --exclude=".git" --exclude="*.o" --exclude="*.out" --exclude="*.swp" --exclude="config.h" "$HOME/.config/st/" "$CONFIG_DIR/Terminals/st/" 2>/dev/null || echo "st config not found"
 
-echo "copying st configs."
-if [ -d ~/.config/st ]; then
-    rsync -a \
-        --exclude=".git" \
-        --exclude="*.o" \
-        --exclude="*.out" \
-        --exclude="*.swp" \
-        --exclude="config.h" \
-        ~/.config/st/ "$DOTFILES_DIR/st/"
-else
-    echo "~/st directory not found"
-fi
+# --- Compositor ---
+cp "$HOME/.config/picom/picom.conf" "$CONFIG_DIR/Compositor/picom/picom.conf" 2>/dev/null || echo "picom.conf not found"
 
-echo "copying wallpapers"
-cp -r ~/Pictures/Wallpaper/* $DOTFILES_DIR/Wallpapers
+# --- Panels ---
+rsync -a "$HOME/.config/polybar/" "$CONFIG_DIR/Panels/polybar/" 2>/dev/null || echo "polybar config not found"
+rsync -a --exclude='.git' "$HOME/.config/dwmblocks/" "$DOTFILES_DIR/config/Panels/dwmblocks/"
 
-echo "copying .xinitrc"
-cp ~/.xinitrc $DOTFILES_DIR
+# --- WM / DE ---
+rsync -a --exclude=".git" --exclude="*.o" --exclude="*.out" --exclude="*.swp" --exclude="config.h" --exclude="patches.h" "$HOME/.config/dwm/" "$CONFIG_DIR/WM/dwm/" 2>/dev/null || echo "dwm config not found"
+rsync -a "$HOME/.config/xfce4/" "$CONFIG_DIR/DE/xfce4/" 2>/dev/null || echo "xfce4 config not found"
 
-echo "copying system images"
-cp -r ~/Pictures/System/* $DOTFILES_DIR/images
+# --- Extra configs ---
+cp "$HOME/.config/nvim/init.lua" "$CONFIG_DIR/ExtraConfigs/nvim/init.lua" 2>/dev/null || echo "nvim/init.lua not found"
+rsync -a "$HOME/.config/neofetch/" "$CONFIG_DIR/ExtraConfigs/neofetch/" 2>/dev/null || echo "neofetch config not found"
+rsync -a --exclude=".git" --exclude="*.swp" "$HOME/.config/rofi/" "$CONFIG_DIR/ExtraConfigs/rofi/" 2>/dev/null || echo "rofi config not found"
 
-echo "dotfiles updated"
+# --- Scripts ---
+rsync -a --exclude="dscCode.sh" "$HOME/Scripts/" "$DOTFILES_DIR/Scripts/" 2>/dev/null || echo "Scripts directory not found"
+
+# --- Wallpapers ---
+rsync -a "$HOME/Pictures/Wallpaper/" "$DOTFILES_DIR/Wallpapers/" 2>/dev/null || echo "Wallpapers not found"
+
+# --- System images ---
+rsync -a "$HOME/Pictures/System/" "$DOTFILES_DIR/Images/" 2>/dev/null || echo "System images not found"
+
+# --- .xinitrc ---
+cp "$HOME/.xinitrc" "$DOTFILES_DIR/.xinitrc" 2>/dev/null || echo ".xinitrc not found"
+
+echo "Dotfiles updated."

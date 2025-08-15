@@ -1,0 +1,2 @@
+neofetch
+PS1='`whoami`@`hostname`:`printf "%s" "$PWD" | sed "s|^$HOME|~|"`$ '

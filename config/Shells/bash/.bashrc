@@ -116,12 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Created by `pipx` on 2025-06-12 11:34:07
 export PATH="$PATH:/home/kc/.local/bin"
 neofetch
 ~/Scripts/mouseaccel.sh
 export COLORTERM=truecolor
 
-export PATH=$PATH:/home/kc/.spicetify
-. "$HOME/.cargo/env"
-export PATH="$HOME/.cargo/bin:$PATH"

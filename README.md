@@ -13,12 +13,12 @@
 
 # neofetch
 
-![neofetch](images/neofetch.png)
+![neofetch](Images/neofetch.png)
 
 # screenshot(s) of my rice
 
-![rice](images/rice1.png)
-![rice2](images/rice2.png)
+![rice](Images/rice1.png)
+![rice2](Images/rice2.png)
 
 
 # configs to ignore

@@ -1,2 +1,26 @@
-neofetch
-PS1='`whoami`@`hostname`:`printf "%s" "$PWD" | sed "s|^$HOME|~|"`$ '
+fastfetch
+alias minecraft="java -jar games/minecraft.jar &"
+alias clock="tty-clock -c -C 4"
+
+PS1='$( 
+    cols=$(tput cols)
+    time=$(date +%H:%M)
+   cwd=$(pwd | sed "s,^$HOME,~,")
+
+   lightred="\033[38;5;210m" 
+   white="\033[97m"
+   reset="\033[0m"
+
+   userhost="${lightred}$(whoami)${white}@${lightred}$(hostname -s)${reset}"
+   left="${userhost}:${lightred}${cwd}${reset}"
+   right="${lightred}${time}${reset}"
+
+   left_plain="$(whoami)@$(hostname -s):$cwd"
+   right_plain="$time"
+   len=$(( ${#left_plain} + ${#right_plain} ))
+   pad=$(( cols - len ))
+  [ $pad -lt 1 ] && pad=1
+
+    printf "%b%${pad}s%b\n%b> %b" "$left" "" "$right" "$lightred" "$reset"
+)'
+

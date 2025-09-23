@@ -21,6 +21,7 @@ mkdir -p "$CONFIG_DIR/DE/xfce4"
 mkdir -p "$CONFIG_DIR/ExtraConfigs/nvim"
 mkdir -p "$CONFIG_DIR/ExtraConfigs/neofetch"
 mkdir -p "$CONFIG_DIR/ExtraConfigs/rofi"
+mkdir -p "$CONFIG_DIR/ExtraConfigs/fastfetch"
 
 mkdir -p "$DOTFILES_DIR/Scripts"
 mkdir -p "$DOTFILES_DIR/Wallpapers"
@@ -49,6 +50,7 @@ rsync -a "$HOME/.config/xfce4/" "$CONFIG_DIR/DE/xfce4/" 2>/dev/null || echo "xfc
 cp "$HOME/.config/nvim/init.lua" "$CONFIG_DIR/ExtraConfigs/nvim/init.lua" 2>/dev/null || echo "nvim/init.lua not found"
 rsync -a "$HOME/.config/neofetch/" "$CONFIG_DIR/ExtraConfigs/neofetch/" 2>/dev/null || echo "neofetch config not found"
 rsync -a --exclude=".git" --exclude="*.swp" "$HOME/.config/rofi/" "$CONFIG_DIR/ExtraConfigs/rofi/" 2>/dev/null || echo "rofi config not found"
+rsync -a "$HOME/.config/fastfetch/" "$CONFIG_DIR/ExtraConfigs/fastfetch/" 2>/dev/null || echo "fastfetch config not found"
 
 # --- Scripts ---
 rsync -a --exclude="dscCode.sh" "$HOME/Scripts/" "$DOTFILES_DIR/Scripts/" 2>/dev/null || echo "Scripts directory not found"

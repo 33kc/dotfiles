@@ -185,33 +185,35 @@ char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
 
 /* Terminal colors (16 first used in escape sequence) */
 static char *colorname[] = {
-	/* 8 normal colors */
-	"#1e1e2e", /* black   */
-	"#f38ba8", /* red     */
-	"#a6e3a1", /* green   */
-	"#f9e2af", /* yellow  */
-	"#89b4fa", /* blue    */
-	"#f5c2e7", /* magenta */
-	"#94e2d5", /* cyan    */
-	"#bac2de", /* white   */
+        /* 8 normal colors */
+        "#45475a", /* black   */
+        "#f38ba8", /* red     */
+        "#a6e3a1", /* green   */
+        "#f9e2af", /* yellow  */
+        "#89b4fa", /* blue    */
+        "#f5c2e7", /* magenta */
+        "#94e2d5", /* cyan    */
+        "#bac2de", /* white   */
 
-	/* 8 bright colors */
-	"#6c7086", /* black   */
-	"#f38ba8", /* red     */
-	"#a6e3a1", /* green   */
-	"#f9e2af", /* yellow  */
-	"#89b4fa", /* blue    */
-	"#f5c2e7", /* magenta */
-	"#94e2d5", /* cyan    */
-	"#a6adc8", /* white   */
+        /* 8 bright colors */
+        "#585b70", /* bright black */
+        "#f38ba8", /* bright red   */
+        "#a6e3a1", /* bright green */
+        "#f9e2af", /* bright yellow*/
+        "#89b4fa", /* bright blue  */
+        "#f5c2e7", /* bright magenta */
+        "#94e2d5", /* bright cyan  */
+        "#a6adc8", /* bright white */
 
-	[255] = 0,
+        [255] = 0,
 
-	/* more colors can be added here */
-	[256] = "#1e1e2e", /* default background */
-	[257] = "#cdd6f4", /* default foreground */
-	[258] = "#585b70", /* cursor */
+        /* extra colors */
+        [256] = "#1e1e2e", /* background */
+        [257] = "#cdd6f4", /* foreground */
+        [258] = "#f5e0dc", /* cursor */
+        [259] = "#1e1e2e", /* cursor text color */
 };
+
 /* Default colors (colorname index) */
 
 /*

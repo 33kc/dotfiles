@@ -1,6 +1,7 @@
 fastfetch
-alias minecraft="java -jar games/minecraft.jar &"
+alias minecraft="java -Xms2G -Xmx3G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=50 -jar games/minecraft.jar"
 alias clock="tty-clock -c -C 4"
+alias mcss="thunar .minecraft/screenshots"
 
 PS1='$( 
     cols=$(tput cols)

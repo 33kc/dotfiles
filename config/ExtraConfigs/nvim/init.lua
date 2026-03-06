@@ -37,3 +37,7 @@ vim.schedule(function()
 end)
 
 vim.opt.clipboard = "unnamedplus"
+
+
+vim.keymap.set("i", "nn", "<Esc>", { noremap = true })
+
